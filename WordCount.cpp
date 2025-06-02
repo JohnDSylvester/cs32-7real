@@ -25,7 +25,7 @@ static void merge(vector<std::pair<std::string, int>>& arr, int left,
     		while (i < n1 && j < n2) {
         		if (L[i].second > R[j].second) {
             			arr[k] = R[j];
-            			i++;
+            			j++;
         		}
 			else if(L[i].second == R[j].second){
 				if (L[i].first <= R[j].first) {
@@ -39,7 +39,7 @@ static void merge(vector<std::pair<std::string, int>>& arr, int left,
 			}
         		else {
             			arr[k] = L[i];
-            			j++;
+            			i++;
         		}
         		k++;
 	
