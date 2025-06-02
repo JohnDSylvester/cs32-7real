@@ -24,16 +24,16 @@ static void merge(vector<std::pair<std::string, int>>& arr, int left,
 	if(byCount == 1){
     		while (i < n1 && j < n2) {
         		if (L[i].second > R[j].second) {
-            			arr[k] = L[i];
+            			arr[k] = R[i];
             			i++;
         		}
 			else if(L[i].second == R[j].second){
 				if (L[i].first <= R[j].first) {
-                                	arr[k] = L[i];
+                                	arr[k] = R[i];
                                 	i++;
                 		}	
 				else{
-					arr[k] = R[j];
+					arr[k] = L[j];
                                 	j++;
 				}
 			}
