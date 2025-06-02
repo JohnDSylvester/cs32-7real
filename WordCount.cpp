@@ -29,16 +29,16 @@ static void merge(vector<std::pair<std::string, int>>& arr, int left,
         		}
 			else if(L[i].second == R[j].second){
 				if (L[i].first <= R[j].first) {
-                                	arr[k] = R[i];
+                                	arr[k] = L[i];
                                 	i++;
                 		}	
 				else{
-					arr[k] = L[j];
+					arr[k] = R[j];
                                 	j++;
 				}
 			}
         		else {
-            			arr[k] = R[j];
+            			arr[k] = L[j];
             			j++;
         		}
         		k++;
